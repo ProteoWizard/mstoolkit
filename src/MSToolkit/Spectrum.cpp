@@ -672,8 +672,8 @@ void Spectrum::printMe() {
 
 /* For the qsort */
 int Spectrum::compareIntensity(const void *p1, const void *p2){
-  const Peak_T d1 = *(Peak_T *)p1;
-  const Peak_T d2 = *(Peak_T *)p2;
+  const Peak_T &d1 = *(Peak_T *)p1;
+  const Peak_T &d2 = *(Peak_T *)p2;
   if(d1.intensity<d2.intensity) return -1;
   else if(d1.intensity>d2.intensity) return 1;
   else return 0;
@@ -681,8 +681,8 @@ int Spectrum::compareIntensity(const void *p1, const void *p2){
 
 /* For the qsort */
 int Spectrum::compareMZ(const void *p1, const void *p2){
-  const Peak_T d1 = *(Peak_T *)p1;
-  const Peak_T d2 = *(Peak_T *)p2;
+  const Peak_T &d1 = *(Peak_T *)p1;
+  const Peak_T &d2 = *(Peak_T *)p2;
   if(d1.mz<d2.mz) return -1;
   else if(d1.mz>d2.mz) return 1;
   else return 0;
@@ -690,8 +690,8 @@ int Spectrum::compareMZ(const void *p1, const void *p2){
 
 /* For the qsort */
 int Spectrum::compareIntensityRev(const void *p1, const void *p2){
-  const Peak_T d1 = *(Peak_T *)p1;
-  const Peak_T d2 = *(Peak_T *)p2;
+  const Peak_T &d1 = *(Peak_T *)p1;
+  const Peak_T &d2 = *(Peak_T *)p2;
   if(d1.intensity>d2.intensity) return -1;
   else if(d1.intensity<d2.intensity) return 1;
   else return 0;
@@ -699,8 +699,8 @@ int Spectrum::compareIntensityRev(const void *p1, const void *p2){
 
 /* For the qsort */
 int Spectrum::compareMZRev(const void *p1, const void *p2){
-  const Peak_T d1 = *(Peak_T *)p1;
-  const Peak_T d2 = *(Peak_T *)p2;
+  const Peak_T &d1 = *(Peak_T *)p1;
+  const Peak_T &d2 = *(Peak_T *)p2;
   if(d1.mz>d2.mz) return -1;
   else if(d1.mz<d2.mz) return 1;
   else return 0;
